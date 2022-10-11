@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Add Musician</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">       
+        <link href="../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+        <link href="../static/fontawsome/css/all.css" th:href="@{/fontawsome/css/all.css}" rel="stylesheet" >
+        <link rel="stylesheet" href="../static/css/shards.min.css">
+    </head>
+    <body>
+        <div class="container my-5">
+            <h2 class="mb-5">New Musician</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <form action="#" th:action="@{/musicians}" th:object="${musicianDTO}" method="post">
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="name" class="col-form-label">Name</label>
+                                <input type="text" th:field="*{name}" class="form-control" id="name" placeholder="Name">
+                                <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="text-danger"></span>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="dateOfBirth" class="col-form-label">Birthdate</label>
+                                <input type="text" th:field="*{dateOfBirth}" class="form-control" id="dateOfBirth" placeholder="Birthdate">
+                                <span th:if="${#fields.hasErrors('dateOfBirth')}" th:errors="*{dateOfBirth}" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mt-5">
+                                <input type="submit" class="btn btn-primary" value="Add Musician">
+                            </div>
+                        </div>    
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
