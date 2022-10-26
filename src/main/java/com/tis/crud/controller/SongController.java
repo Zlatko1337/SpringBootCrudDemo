@@ -10,9 +10,9 @@ import com.tis.crud.service.SongService;
 @Controller
 public class SongController {
     
-    @Autowired
+	@Autowired
 	private SongService songService;
-    
+	
 	@GetMapping("/songs")
 	public String showSongsList(@RequestParam(name = "albumId") long albumId, Model model) {
 		model.addAttribute("songs", songService.getSongsByAlbumId(albumId)); //or album.getSongs()

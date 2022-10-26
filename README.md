@@ -1,4 +1,4 @@
-This simple Spring Boot app that demonstrates CRUD operations. It uses H2 in-memory database. Fronted is made with Thymeleaf and Datatables with server-side processing (paging). Credits go to creators of these great libs.
+This simple Spring Boot app that demonstrates CRUD operations. It uses H2 in-memory database. Frontend is made with Thymeleaf and Datatables with server-side processing (paging). Credits go to creators of these great libs.
 This demo app uses few software design patterns, Controller-Service-Repository and Data Transfer Object pattern to name a few.
 
 The goal was is not a make a pretty gui, but to experiment with libs and test some concepts.
