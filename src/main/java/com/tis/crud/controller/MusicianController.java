@@ -22,7 +22,7 @@ public class MusicianController {
 	@GetMapping("/musicians")
 	public String showMusicians(Model model) {
 		model.addAttribute("musicians", musicianService.getAllMusicians());
-	    return "musicians";
+		return "musicians";
 	}
 	
 	@GetMapping("/musicians/add")
@@ -58,7 +58,7 @@ public class MusicianController {
 	@DeleteMapping("/musicians/{id}")
 	public String deleteMusician(@PathVariable("id") long musicianId) {
 		musicianService.deleteMusician(musicianId);
-	    return "redirect:/musicians";
+		return "redirect:/musicians";
 	}	
     
 }
